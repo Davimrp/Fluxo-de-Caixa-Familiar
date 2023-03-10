@@ -3,21 +3,28 @@ const inputDespesa = document.querySelector('#despesa');
 const btnComputarDespesa = document.querySelector('#computar-despesa')
 const btnComputarRenda = document.querySelector('#computar-renda');
 const btnCalcularFluxo = document.querySelector('#calcular')
-
+const btnRefazer = document.querySelector("#resetar")
 
 let familia = {
     renda: [],
     despesas: []
 }
 
+btnRefazer.addEventListener("click", e=>{
+    familia = {
+        renda: [],
+        despesas: []
+    }
+    document.querySelector('#pre-renda').innerHTML = ''
+    document.querySelector('#pre-despesa').innerHTML = ''
+    document.querySelector('#resultado-final').style.display = 'none';
+})
+
 function exibirFluxo(renda, despesas, saldo){
     const resultadoText = document.querySelector('#resultado-text');
-    console.log(resultadoText)
-    resultadoText.textContent = `As despesas do mês totalizam R$${despesas} e sua renda mensal totaliza R$${renda}, portanto o dinheiro que sobra após pagarem as contas é um total de R$${saldo}`;
+    resultadoText.textContent = `As despesas do mês totalizam R$${despesas} e sua renda mensal totaliza R$${renda}, portanto o dinheiro que sobra após pagarem as contas é R$${saldo}`;
     document.querySelector('#resultado-final').style.display = 'block';
     
-    document.querySelector('#pre-renda').innerHTML = '';
-    document.querySelector('#pre-despesa').innerHTML = '';
 }
 
 function soma(array){

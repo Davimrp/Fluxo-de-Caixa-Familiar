@@ -102,6 +102,15 @@ button{
     cursor: pointer;
 }
 
+#resetar{
+    margin: auto;
+    background-color: rgba(151, 174, 216, 0.658);
+    color: rgb(48, 47, 47);
+}
+#resetar:hover{
+    background-color: rgb(120, 162, 240);;
+}
+
 #resultado-final{
     border-radius: 5px;
     background-color: rgb(199, 240, 243);
@@ -115,6 +124,7 @@ button{
 
 #resultado-final p{
     color: rgb(29, 29, 29);
+    margin-bottom: 10px;
 }
 
 #pre-renda{
@@ -195,6 +205,11 @@ button:hover{
     #duvidas{
         left: 92%;
         top: 1%
+    }
+
+    #sair-duvidas{
+        left: 92%;
+        top: 2%
     }
 
     #resultado-final{
