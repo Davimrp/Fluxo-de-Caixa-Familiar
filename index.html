@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/1cf9b635a9.js" crossorigin="anonymous"></script>
+    <title>Fluxo de Caixa Familiar</title>
+</head>
+<body>
+    <main>
+        <h1>Fluxo de Caixa Familiar</h1>
+        <section class="container">
+            <article class="dados">
+                <i class="fa-solid fa-circle-question" id="duvidas"></i>
+                <form>
+                    <p>Digite aqui a renda mensal de cada familiar 
+                    </p> 
+                    <label>
+                        <input type="text" placeholder="Renda" id="renda">
+                        <button id="computar-renda">Computar</button>
+                    </label>
+                </form>
+                <form>
+                    <p>Digite aqui as despesas mensais da casa</p>
+                    <p class="instruction"></p>
+                    <label>
+                        <input type="text" placeholder="Despesa" id="despesa">
+                        <button id="computar-despesa">Computar</button>
+                    </label>
+                </form>
+            </article>
+            <button id="calcular">Calcular</button>
+            <div id="resultado-final">
+                <p id="resultado-text"></p>
+            </div>
+
+            <div id="instruction" class="some">
+                <i class="fa-solid fa-x" id="sair-duvidas"></i>
+                <h2>Para a Renda:</h2>
+                <span> Escreva as rendas individualmente e clique em computar assim que terminar de digitar a renda mensal de uma pessoa. Após isso, digite a renda mensal do outro membro da família, até que tenha computado todas as rendas familiares.</span>
+                    <br>
+                <h2>Para as Despesas:</h2>
+                <span> Faça o mesmo que fez em rendas mensais, digite individualmente uma despesa, clique em computar e em seguida escreva a próxima despesa e repita o processo</span>
+                <br>
+                <h3>Quando terminar de inserir os dados, clique em no botão "Calcular"</h3>
+            </div>
+
+        </section>
+
+
+    </main>
+
+    <script src="fluxoDeCaixaFamiliar.js"></script>
+</body>
+</html>
