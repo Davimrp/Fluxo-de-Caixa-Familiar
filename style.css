@@ -55,7 +55,7 @@ p{
     background-color: white;
     color: rgb(44, 44, 44);
     border-radius: 5px;
-    height: 280px;
+    height: 350px;
     position: absolute;
     left: 0;
     top: 0;
@@ -201,7 +201,7 @@ button:hover{
         width: 85%;
     }
 
-    form{
-
+    #instruction{
+        height: 370px;
     }
 }
