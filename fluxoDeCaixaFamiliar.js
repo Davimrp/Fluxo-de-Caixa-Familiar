@@ -15,7 +15,9 @@ function exibirFluxo(renda, despesas, saldo){
     console.log(resultadoText)
     resultadoText.textContent = `As despesas do mês totalizam R$${despesas} e sua renda mensal totaliza R$${renda}, portanto o dinheiro que sobra após pagarem as contas é um total de R$${saldo}`;
     document.querySelector('#resultado-final').style.display = 'block';
-
+    
+    document.querySelector('#pre-renda').innerHTML = '';
+    document.querySelector('#pre-despesa').innerHTML = '';
 }
 
 function soma(array){
@@ -30,6 +32,10 @@ function calcularFluxo(){
     const rendaTotal = soma(familia.renda);
     const despesasTotais = soma(familia.despesas);
     const saldo = rendaTotal - despesasTotais
+    if (rendaTotal == 0 || despesasTotais == 0) {
+        alert('Por favor, Digite todos os dados corretamente.');
+        return
+    }
     exibirFluxo(rendaTotal, despesasTotais, saldo)
 }
 
@@ -48,6 +54,8 @@ function verificaRenda(){
     familia.renda.push(valor);
     inputRenda.value = '';
     inputRenda.focus();
+
+    document.querySelector('#pre-renda').innerHTML = soma(familia.renda)
 }
 btnComputarRenda.addEventListener('click', e => {
     e.preventDefault();
@@ -64,6 +72,8 @@ function verificaDespesa(){
     familia.despesas.push(valor);
     inputDespesa.value = '';
     inputDespesa.focus();
+
+    document.querySelector('#pre-despesa').innerHTML = soma(familia.despesas)
 }
 btnComputarDespesa.addEventListener('click', e => {
     e.preventDefault();
